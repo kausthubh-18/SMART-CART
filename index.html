@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> SMART CART </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+<h2> Welcome To Smart Cart </h2>
+
+<div class="status-bar">
+    <div class="left">
+        <span id="wifi">Wi-Fi: --</span>
+        <span id="network">Net: --</span>
+    </div>
+    <div class="right">
+        <span id="battery">Battery: --%</span>
+    </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="main">
+
+    <!-- TABLE SECTION -->
+    <div class="table-section">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>S:NO</th>
+                    <th>Grocery Name</th>
+                    <th>Image</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Weight</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td>1</td>
+                <td>Salt</td>
+                <td><img src="salt.jpg"></td>
+                <td>01</td>
+                <td>70₹</td>
+                <td>500g</td>
+                <td>
+                    <button onclick="removeItem(this)">❌</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Tomato</td>
+                <td><img src="tomato.jpg"></td>
+                <td>-----</td>
+                <td>30₹</td>
+                <td>1kg</td>
+                <td>
+                    <button onclick="removeItem(this)">❌</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Jeera</td>
+                <td><img src="jeera.jpg"></td>
+                <td>01</td>
+                <td>50₹</td>
+                <td>100g</td>
+                <td>
+                    <button onclick="removeItem(this)">❌</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Cumin powder</td>
+                <td><img src="cumin.webp"></td>
+                <td>01</td>
+                <td>70₹</td>
+                <td>50g</td>
+                <td>
+                    <button onclick="removeItem(this)">❌</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="5"><strong>Grand Total</strong></td>
+                <td colspan="2"><span id="grandTotal">0</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- PAYMENT SECTION -->
+    <div class="payment-section">
+
+        <div class="payment-header">
+            Scan to Pay
+        </div>
+
+        <button id="payBtn" onclick="generateQR()">Pay Now</button>
+
+        <div id="qrSection">
+            <div id="qrWrapper">
+                <div id="qrcode"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

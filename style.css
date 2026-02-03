@@ -1,0 +1,118 @@
+/* ---------- RESET ---------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+/* ---------- TITLE ---------- */
+h2 {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px;
+    margin: 0;
+}
+
+/* ---------- STATUS BAR ---------- */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+.main {
+    display: flex;
+    height: calc(100vh - 120px);
+}
+
+.table-section { flex: 3; }
+.payment-section { flex: 1; }
+
+/* ---------- TABLE SECTION ---------- */
+.table-section {
+    flex: 3;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+/* ---------- PAYMENT SECTION ---------- */
+.payment-section {
+    flex: 1;
+    padding: 10px;
+    border-left: 2px solid #ccc;
+    text-align: center;
+}
+
+/* ---------- SCAN TO PAY HEADER ---------- */
+.payment-header {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* ---------- PAY NOW BUTTON ---------- */
+#payBtn {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ---------- QR SECTION ---------- */
+#qrSection {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+/* QR FIXED WRAPPER (IMPORTANT) */
+#qrWrapper {
+    width: 340px;
+    height: 340px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* QR ITSELF */
+#qrcode canvas,
+#qrcode img {
+    width: 300px;
+    height: 300px;
+}
+
+/* ---------- TABLE ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* ---------- IMAGES ---------- */
+img {
+    max-width: 80px;
+}
