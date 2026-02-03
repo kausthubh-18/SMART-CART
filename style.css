@@ -30,11 +30,8 @@ h2 {
 /* ---------- MAIN LAYOUT ---------- */
 .main {
     display: flex;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 120px); /* perfect for 7-inch screen */
 }
-
-.table-section { flex: 3; }
-.payment-section { flex: 1; }
 
 /* ---------- TABLE SECTION ---------- */
 .table-section {
@@ -74,30 +71,23 @@ h2 {
     cursor: pointer;
 }
 
-/* ---------- QR SECTION ---------- */
+/* QR SECTION */
 #qrSection {
     margin-top: 15px;
     display: flex;
     justify-content: center;
 }
 
-/* QR FIXED WRAPPER (IMPORTANT) */
+/* QR WRAPPER — MATCH QR SIZE */
 #qrWrapper {
-    width: 340px;
-    height: 340px;
+    width: 420px;
+    height: 420px;
     background: white;
     padding: 10px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* QR ITSELF */
-#qrcode canvas,
-#qrcode img {
-    width: 300px;
-    height: 300px;
 }
 
 /* ---------- TABLE ---------- */
@@ -115,86 +105,4 @@ th, td {
 /* ---------- IMAGES ---------- */
 img {
     max-width: 80px;
-}
-
-/* ===============================
-   MOBILE RESPONSIVENESS
-   =============================== */
-@media (max-width: 768px) {
-
-    /* Stack layout vertically */
-    .main {
-        flex-direction: column;
-        height: auto;
-    }
-
-    /* Full-width sections */
-    .table-section,
-    .payment-section {
-        width: 100%;
-        flex: none;
-        border-left: none;
-    }
-
-    /* Reduce title size */
-    h2 {
-        font-size: 24px;
-        padding: 10px;
-    }
-
-    /* Status bar adjustments */
-    .status-bar {
-        font-size: 14px;
-        padding: 8px 12px;
-        flex-wrap: wrap;
-        gap: 6px;
-    }
-
-    /* Table responsiveness */
-    .table-section {
-        overflow-x: auto;
-    }
-
-    table {
-        font-size: 14px;
-        min-width: 600px; /* prevents squishing */
-    }
-
-    th, td {
-        padding: 8px;
-    }
-
-    /* Images smaller on mobile */
-    img {
-        max-width: 50px;
-    }
-
-    /* Payment header */
-    .payment-header {
-        font-size: 22px;
-    }
-
-    /* Pay button touch-friendly */
-    #payBtn {
-        font-size: 18px;
-        padding: 12px;
-    }
-
-    /* QR resizing */
-    #qrWrapper {
-        width: 260px;
-        height: 260px;
-    }
-
-    #qrcode canvas,
-    #qrcode img {
-        width: 240px;
-        height: 240px;
-    }
-
-    /* Action buttons */
-    button {
-        font-size: 16px;
-        padding: 6px 10px;
-    }
 }
